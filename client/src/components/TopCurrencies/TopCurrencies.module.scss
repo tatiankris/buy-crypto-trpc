@@ -1,0 +1,29 @@
+.topCrypto {
+  height: 48px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+  .topCrypto__Button {
+    height: 100%;
+    background-color: rgb(246 250 254);
+    text-align: center;
+    padding: 16px 0;
+    width: 50px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(188 211 225 / 53%);
+    }
+  }
+}
+@media screen and (min-width: 490px) {
+  .topCrypto {
+    font-size: 16px;
+    .topCrypto__Button {
+      font-size: 18px;
+    }
+  }
+}

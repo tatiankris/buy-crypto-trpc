@@ -9,7 +9,7 @@ export const getUsersCurrenciesIds = (): Array<string> => {
     : null;
   return localStorageParsedData
     ? localStorageParsedData.map((c: { id: string; value: number }) => c.id)
-    : [] as Array<string>;
+    : ([] as Array<string>);
 };
 
 export const setUsersCurrency = (

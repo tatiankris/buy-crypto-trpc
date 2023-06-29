@@ -60,7 +60,7 @@ function AddCurrencyModal({ handleClose, ...props }: PropsType) {
           value={usdValue}
           onChange={changeUsdValueHandler}
         />
-        <button disabled={cryptoValue <= 0} className={style.submit} type={'submit'}>
+        <button disabled={+cryptoValue <= 0} className={style.submit} type={'submit'}>
           ADD
         </button>
       </form>

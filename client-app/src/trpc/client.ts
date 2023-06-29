@@ -1,17 +1,17 @@
-import { createTRPCReact } from '@trpc/react-query'
-import type { AppRouter } from '../../../server/src/router'
-import {createTRPCProxyClient, httpBatchLink} from "@trpc/client";
-import {inferRouterInputs, inferRouterOutputs} from "@trpc/server";
+import { createTRPCReact } from '@trpc/react-query';
+import type { AppRouter } from '../../../server/src/router';
+import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
+import { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
 
 export const trpcReactQuery = createTRPCReact<AppRouter>();
 
 export const client = createTRPCProxyClient<AppRouter>({
-    links: [
-        httpBatchLink({
-            url: "http://localhost:4000/trpc",
-        }),
-    ],
-})
+  links: [
+    httpBatchLink({
+      url: 'http://localhost:4000/trpc',
+    }),
+  ],
+});
 
 // //@ts-ignore
 // const r = await trpc.currency.getCurrencyById.query( {id: 'bitcoin' })

@@ -3,21 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tanstack/react-query": "^4.29.18",
+    "@tanstack/react-query": "^4.29.19",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@trpc/client": "^10.32.0",
     "@trpc/react-query": "^10.32.0",
     "@trpc/server": "^10.32.0",
     "@types/compose-function": "^0.0.30",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "axios": "^1.4.0",
     "compose-function": "^3.0.3",
-    "eslint": "8.22.0",
+    "eslint": "8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^4.2.1",
@@ -35,20 +35,23 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "sass": "^1.62.1",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0",
+    "typescript": "^5.1.0-dev.20230515",
+    "web-vitals": "^3.3.2",
     "zustand": "^4.3.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -64,6 +67,19 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-react-app": "^7.0.1"
+    "@storybook/addon-essentials": "7.0.24",
+    "@storybook/addon-interactions": "7.0.24",
+    "@storybook/addon-links": "7.0.24",
+    "@storybook/blocks": "7.0.24",
+    "@storybook/preset-create-react-app": "7.0.24",
+    "@storybook/react": "7.0.24",
+    "@storybook/react-webpack5": "7.0.24",
+    "@storybook/testing-library": "0.2.0",
+    "babel-plugin-named-exports-order": "0.0.2",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-storybook": "^0.6.12",
+    "prop-types": "15.8.1",
+    "storybook": "7.0.24",
+    "webpack": "5.88.0"
   }
 }

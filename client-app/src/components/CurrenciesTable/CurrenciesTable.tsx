@@ -37,7 +37,7 @@ function CurrenciesTable({ type, page, currencies, userCurrencies, ...props }: P
               currencies.map((c) => (
                 <CurrencyRow
                   smallScreen={smallScreen}
-                  userCurrencies={userCurrencies ? userCurrencies: null}
+                  userCurrencies={userCurrencies ? userCurrencies : null}
                   type={type}
                   key={c.id}
                   currency={c}

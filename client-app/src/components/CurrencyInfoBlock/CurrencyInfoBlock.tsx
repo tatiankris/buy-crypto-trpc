@@ -1,6 +1,6 @@
 import style from './CurrencyInfoBlock.module.scss';
 import { refactorNum } from '../../processes/abbrNum';
-import {CurrencyType} from '../../../../server/src/api/api'
+import { CurrencyType } from '../../../../server/src/api/api';
 
 type PropsType = {
   currency: CurrencyType;

@@ -1,6 +1,6 @@
 import create from 'zustand';
 import { CurrencyHistoryType, CurrencyType } from '../../../server/src/api/api';
-import {getCurrencyById, getCurrencyHistory} from "../trpc/trpcQueries";
+import { getCurrencyById, getCurrencyHistory } from '../trpc/trpcQueries';
 type CurrencyStateType = {
   currentCurrency: null | CurrencyType;
   currencyHistory: null | CurrencyHistoryType;
@@ -13,23 +13,22 @@ export const useCurrencyStore = create<CurrencyStateType>((set) => ({
   currencyHistory: null,
   setCurrentCurrency: async (id: string) => {
     try {
-      const currentCurrency = await getCurrencyById(id)
+      const currentCurrency = await getCurrencyById(id);
       set(() => {
         return { currentCurrency };
       });
     } catch (err) {
-      console.log(err)
-
+      console.log(err);
     }
   },
   setCurrencyHistory: async (id: string) => {
     try {
-      const currencyHistory = await getCurrencyHistory(id)
+      const currencyHistory = await getCurrencyHistory(id);
       set(() => {
         return { currencyHistory };
       });
     } catch (err) {
-      console.log( err )
+      console.log(err);
     }
   },
 }));

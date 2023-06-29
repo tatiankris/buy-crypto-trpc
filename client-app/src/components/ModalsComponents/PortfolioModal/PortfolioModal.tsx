@@ -13,19 +13,21 @@ type PropsType = {
 function PortfolioModal({ handleClose, ...props }: PropsType) {
   const [page, setPage] = useState(0);
   const currencies = useProfileStore((state) => state.usersCurrencies);
-  const userCurrencies = getUsersCurrencies()
+  const userCurrencies = getUsersCurrencies();
   console.log('currencies', currencies?.length);
   return (
     <ModalContainer handleClose={handleClose} nameText={'Portfolio'}>
       {!currencies?.length && <div className={style.profile__empty}>Portfolio is empty</div>}
       {!!currencies?.length && (
         <div>
-          {userCurrencies && <CurrenciesTable
-            userCurrencies={userCurrencies}
-            page={page}
-            type={'portfolio'}
-            currencies={currencies.length ? currencies.slice(page * 6, page * 6 + 6) : null}
-          />}
+          {userCurrencies && (
+            <CurrenciesTable
+              userCurrencies={userCurrencies}
+              page={page}
+              type={'portfolio'}
+              currencies={currencies.length ? currencies.slice(page * 6, page * 6 + 6) : null}
+            />
+          )}
           {currencies.length > 6 && (
             <Pagination itemsCount={currencies.length} page={page} setPage={setPage} />
           )}

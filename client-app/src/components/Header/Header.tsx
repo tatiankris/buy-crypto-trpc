@@ -16,7 +16,7 @@ function Header() {
   return (
     <div className={style.header}>
       <div onClick={handleMain} className={style.logo}>
-          <img src={Logo} alt="logo" className={style.logo__svg} />
+        <img src={Logo} alt="logo" className={style.logo__svg} />
         <span>uyCrypto</span>
       </div>
       <div className={`${style.portfolio} ${!valueExist && style.portfolio_withoutValue}`}>

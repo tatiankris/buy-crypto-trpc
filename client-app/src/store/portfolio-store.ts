@@ -9,7 +9,7 @@ import {
 } from '../processes/getLocalStorageData';
 import { getPortfolioValues, getPortfolioValue } from '../processes/getPortfolioValue';
 import { useCurrencyStore } from './currency-store';
-import {getCurrenciesByIds} from "../trpc/trpcQueries";
+import { getCurrenciesByIds } from '../trpc/trpcQueries';
 type PortfolioValueType = {
   newValue: number;
   walletDifference: number;
@@ -40,7 +40,7 @@ export const useProfileStore = create<PortfolioStateType>((set) => ({
           return { usersCurrencies: data };
         });
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     }
   },

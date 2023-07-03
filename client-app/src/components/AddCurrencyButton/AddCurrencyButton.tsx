@@ -13,7 +13,7 @@ function AddCurrencyButton({ id, ...props }: PropsType) {
   };
   return (
     <div>
-      <button onClick={handleOpenModal} className={style.addButton}>
+      <button id={'addCurrency'} onClick={handleOpenModal} className={style.addButton}>
         +
       </button>
     </div>

@@ -46,6 +46,7 @@ function AddCurrencyModal({ handleClose, ...props }: PropsType) {
       <form onSubmit={addCurrencyHandler}>
         <label>{currency.name}</label>
         <input
+          id={'inputCurrency'}
           placeholder={'Amount of currency'}
           type="number"
           step={0.000001}
@@ -54,13 +55,19 @@ function AddCurrencyModal({ handleClose, ...props }: PropsType) {
         />
         <label>USD {currency.priceUsd.slice(0, 9)}$</label>
         <input
+          id={'inputUSD'}
           placeholder={'Dollar value'}
           type={'number'}
           step={0.000001}
           value={usdValue}
           onChange={changeUsdValueHandler}
         />
-        <button disabled={+cryptoValue <= 0} className={style.submit} type={'submit'}>
+        <button
+          id={'addCurrencyButton'}
+          disabled={+cryptoValue <= 0}
+          className={style.submit}
+          type={'submit'}
+        >
           ADD
         </button>
       </form>

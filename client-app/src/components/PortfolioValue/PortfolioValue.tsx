@@ -7,7 +7,7 @@ function PortfolioValue() {
     : { newValue: 0, walletDifference: 0, walletPercentDifference: 0 };
 
   return (
-    <div>
+    <div id={'portfolioValue'}>
       <b>{String(newValue).slice(0, 9)}</b>
       {` ${walletDifference > 0 ? '+' : ''}${String(walletDifference).slice(0, 4)} (${
         walletPercentDifference > 0 ? '+' : ''

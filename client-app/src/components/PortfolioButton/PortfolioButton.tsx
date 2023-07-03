@@ -9,7 +9,7 @@ function PortfolioButton() {
     navigate('portfolio', { state: { background: location } });
   };
   return (
-    <button onClick={handleOpenModal} className={style.portfolioButton}>
+    <button id={'portfolioButton'} onClick={handleOpenModal} className={style.portfolioButton}>
       <img src={IconPortfolio} alt="icon" style={{ height: '40px', width: '40px' }} />
     </button>
   );

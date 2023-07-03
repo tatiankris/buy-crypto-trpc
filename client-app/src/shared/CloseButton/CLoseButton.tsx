@@ -5,7 +5,7 @@ type PropsType = {
 };
 function CLoseButton({ handleClose, ...props }: PropsType) {
   return (
-    <button onClick={handleClose} className={style.close}>
+    <button id={'closeButton'} onClick={handleClose} className={style.close}>
       x
     </button>
   );

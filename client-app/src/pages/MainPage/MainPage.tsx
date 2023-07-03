@@ -10,7 +10,7 @@ function MainPage() {
   const data = useGetAllCurrencies(page);
   const currencies = useMemo(() => data?.data, [data?.data]);
   return (
-    <div className={style.main}>
+    <div id={'main'} className={style.main}>
       <h2>Currencies</h2>
       <CurrenciesTable type={'main'} page={page} currencies={currencies ? currencies : null} />
       <Pagination itemsCount={2000} page={page} setPage={setPage} />

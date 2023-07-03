@@ -9,11 +9,10 @@
     "dev": "concurrently \"yarn --cwd ./server start\" \"yarn --cwd ./client-app start\""
   },
   "workspaces": [
-    "./client-app/*",
-    "./server/*"
+    "client-app/*",
+    "server/*"
   ],
   "dependencies": {
-    "concurrently": "^8.2.0",
-    "turbo": "^1.10.6"
+    "concurrently": "^8.2.0"
   }
 }

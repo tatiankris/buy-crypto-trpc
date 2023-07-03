@@ -17,9 +17,13 @@ function PortfolioModal({ handleClose, ...props }: PropsType) {
   console.log('currencies', currencies?.length);
   return (
     <ModalContainer handleClose={handleClose} nameText={'Portfolio'}>
-      {!currencies?.length && <div className={style.profile__empty}>Portfolio is empty</div>}
+      {!currencies?.length && (
+        <div id={'emptyPortfolioDiv'} className={style.profile__empty}>
+          Portfolio is empty
+        </div>
+      )}
       {!!currencies?.length && (
-        <div>
+        <div id={'portfolioDiv'}>
           {userCurrencies && (
             <CurrenciesTable
               userCurrencies={userCurrencies}

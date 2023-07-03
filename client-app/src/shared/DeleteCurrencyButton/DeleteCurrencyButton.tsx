@@ -11,7 +11,7 @@ function DeleteCurrencyButton({ id }: PropsType) {
     deleteCurrency(id);
   };
   return (
-    <button onClick={deleteHandle} className={style.delete}>
+    <button id={'deleteCurrency'} onClick={deleteHandle} className={style.delete}>
       Delete
     </button>
   );

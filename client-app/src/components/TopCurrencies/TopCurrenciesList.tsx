@@ -15,7 +15,7 @@ function TopCurrenciesList({ currencies, handleClose }: PropsType) {
     handleClose && handleClose();
   };
   return (
-    <div className={style.topCrypto__Box}>
+    <div id={'topCryptoBox'} className={style.topCrypto__Box}>
       {currencies &&
         currencies.slice(0, 3).map((el, i) => {
           return (

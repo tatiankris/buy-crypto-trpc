@@ -11,7 +11,7 @@ function Pagination({ setPage, itemsCount, ...props }: PropsType) {
     setPage(page);
   };
   return (
-    <div className={style.pagination}>
+    <div id={'pagination'} className={style.pagination}>
       <PageButton
         disabled={page < 1}
         onClick={() => {
